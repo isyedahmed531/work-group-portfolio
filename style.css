@@ -1,3 +1,42 @@
-* {
-  background-color: white;
-}
+   
+
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: black;
+            padding: 13px 100px;
+            margin-top: 50px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: white;
+            font-size: 28px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li {
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: color 0.3s;
+            font-weight: 100;
+        
+        }
+
+        nav ul li:hover {
+            color: #4CAF50;
+        }
