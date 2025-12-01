@@ -1,3 +1,170 @@
+:root {
+  --muted: rgba(255, 255, 255, 0.88);
+}
+
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-image: url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/home-new-bg-free-img.jpg");
+  background-size: cover;
+  background-position: center right;
+  overflow: hidden;
+}
+
+.main::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(12, 70, 95, 0.78) 0%, rgba(18, 110, 115, 0.6) 60%, rgba(12, 70, 95, 0.48) 100%);
+}
+
+header.site-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  padding: 18px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 4px
+}
+
+nav.site-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 13px
+}
+
+nav.site-nav a {
+  color: var(--muted);
+  text-decoration: none
+}
+
+.hero-container {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center
+}
+
+.hero-left {
+  width: 60%;
+  padding-left: 56px;
+  transform: translateY(-4px)
+}
+
+.hero-title {
+  font-size: 64px;
+  line-height: 1.02;
+  margin: 0 0 16px;
+  font-weight: 900;
+  letter-spacing: -1px
+}
+
+.hero-sub {
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 22px;
+  font-size: 15px
+}
+
+.cta {
+  display: flex;
+  gap: 14px
+}
+
+.button {
+  padding: 10px 22px;
+  border-radius: 3px;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13px
+}
+
+.button.primary {
+  background: #fff;
+  color: #17313a;
+  border: 0;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06)
+}
+
+@media (max-width:980px) {
+  .hero-title {
+    font-size: 40px
+  }
+
+  .hero-left {
+    width: 100%;
+    padding: 30px
+  }
+
+  .hero-container {
+    padding-right: 30px
+  }
+}
+
+@media (max-width:600px) {
+  header.site-header {
+    padding: 12px 16px
+  }
+
+  nav.site-nav {
+    gap: 12px;
+    font-size: 12px
+  }
+
+  .hero-container {
+    padding: 0 16px
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.05
+  }
+
+  .hero-sub {
+    font-size: 13px
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start
+  }
+
+  .button {
+    width: 100%;
+    padding: 12px 14px
+  }
+
+  .main {
+    height: 560px;
+    background-position: center
+  }
 }
