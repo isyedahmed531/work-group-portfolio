@@ -3,11 +3,12 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
   color: #fff;
   -webkit-font-smoothing: antialiased;
 }
+/* Ismail */
 
 .main {
   position: relative;
@@ -20,11 +21,16 @@ body {
 }
 
 .main::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(12, 70, 95, 0.78) 0%, rgba(18, 110, 115, 0.6) 60%, rgba(12, 70, 95, 0.48) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(12, 70, 95, 0.78) 0%,
+    rgba(18, 110, 115, 0.6) 60%,
+    rgba(12, 70, 95, 0.48) 100%
+  );
 }
 
 header.site-header {
@@ -36,7 +42,7 @@ header.site-header {
   padding: 18px 36px;
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .logo {
@@ -46,19 +52,19 @@ header.site-header {
   text-transform: lowercase;
   padding: 6px 10px;
   background: rgba(255, 255, 255, 0.04);
-  border-radius: 4px
+  border-radius: 4px;
 }
 
 nav.site-nav {
   display: flex;
   gap: 20px;
   align-items: center;
-  font-size: 13px
+  font-size: 13px;
 }
 
 nav.site-nav a {
   color: var(--muted);
-  text-decoration: none
+  text-decoration: none;
 }
 
 .hero-container {
@@ -68,13 +74,13 @@ nav.site-nav a {
   margin: 0 auto;
   height: 100%;
   display: flex;
-  align-items: center
+  align-items: center;
 }
 
 .hero-left {
   width: 60%;
   padding-left: 56px;
-  transform: translateY(-4px)
+  transform: translateY(-4px);
 }
 
 .hero-title {
@@ -82,19 +88,19 @@ nav.site-nav a {
   line-height: 1.02;
   margin: 0 0 16px;
   font-weight: 900;
-  letter-spacing: -1px
+  letter-spacing: -1px;
 }
 
 .hero-sub {
   font-weight: 700;
   color: var(--muted);
   margin-bottom: 22px;
-  font-size: 15px
+  font-size: 15px;
 }
 
 .cta {
   display: flex;
-  gap: 14px
+  gap: 14px;
 }
 
 .button {
@@ -105,249 +111,99 @@ nav.site-nav a {
   color: #fff;
   font-weight: 700;
   cursor: pointer;
-  font-size: 13px
+  font-size: 13px;
 }
 
 .button.primary {
   background: #fff;
   color: #17313a;
   border: 0;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06)
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
 }
 
-@media (max-width:980px) {
+@media (max-width: 980px) {
   .hero-title {
-    font-size: 40px
+    font-size: 40px;
   }
 
   .hero-left {
     width: 100%;
-    padding: 30px
+    padding: 30px;
   }
 
   .hero-container {
-    padding-right: 30px
+    padding-right: 30px;
   }
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
+  .footer-column {
+    display: block !important;
+    text-align: center;
+    margin: 20px auto;
+  }
   header.site-header {
-    padding: 12px 16px
+    padding: 12px 16px;
   }
 
   nav.site-nav {
     gap: 12px;
-    font-size: 12px
+    font-size: 12px;
   }
 
   .hero-container {
-    padding: 0 16px
+    padding: 0 16px;
   }
 
   .hero-title {
     font-size: 28px;
-    line-height: 1.05
+    line-height: 1.05;
   }
 
   .hero-sub {
-    font-size: 13px
+    font-size: 13px;
   }
 
   .cta {
     flex-direction: column;
-    align-items: flex-start
+    align-items: flex-start;
   }
 
   .button {
     width: 100%;
-    padding: 12px 14px
+    padding: 12px 14px;
   }
 
   .main {
     height: 560px;
-    background-position: center
+    background-position: center;
   }
 }
-/* Products / Cards styles (consolidated) */
-.products {
-  min-width: 90vw;
-  min-height: 90vh;
-  padding: 70px 40px;
-  overflow: hidden;
-}
-
-.products h1 {
-  color: black;
-  font-size: 44px;
-  text-align: center;
-  letter-spacing: 4.5px;
-  font-weight: 300;
-}
-
-.logos {
-  max-width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding-top: 4.5rem;
-  gap: 90px;
-  flex-wrap: wrap;
-}
-
-.cardcontainer {
-  width: 100%;
-  padding: 70px 30px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.card {
-  width: 430px;
-  height: 520px;
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-}
-
-.card img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(14, 13, 13, 0.563);
-}
-
-.position {
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.position h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.position p {
-  font-size: 1.2rem;
-  line-height: 1.7;
-}
-
-/* Button styles for cards */
-button {
-  margin-top: 2rem;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #18181a;
-  color: #18181a;
-  font-size: 18px;
-  padding: 20px 35px;
-  cursor: pointer;
-  background: #fff;
-  font-weight: bold;
-}
-
-button span:first-child {
-  position: relative;
-  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-  z-index: 10;
-}
-
-button span:last-child {
-  color: white;
-  position: absolute;
-  bottom: 0;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translateY(225%) translateX(-50%);
-  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-}
-
-button:after {
-  content: "";
-  position: absolute;
-  bottom: -50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  transform-origin: bottom center;
-  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
-  transform: skewY(9.3deg) scaleY(0);
-}
-
-button:hover:after {
-  transform: skewY(9.3deg) scaleY(2);
-}
-
-button:hover span:last-child {
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 1;
-}
-
 
 /* Hussian  */
 
 .products {
-  min-width: 90vw;
-  min-height: 90vh;
-  padding: 70px 40px;
+  padding: 100px 40px;
   overflow: hidden;
-
 }
 
-.products h1 {
-  color: black;
-  font-size: 44px;
+.card-title {
+  font-size: 60px;
+  line-height: 1.02;
+  margin: 0 0 16px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #000;
   text-align: center;
-  letter-spacing: 4.5px;
-  font-weight: 300;
-
-
-}
-
-.logos {
-  max-width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding-top: 4.5rem;
-  gap: 90px;
 }
 
 .cardcontainer {
-  width: 100%;
-  padding: 70px 30px;
+  padding: 20px 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* justify-content: center; */
-  /* align-content: center; */
   justify-items: center;
   align-items: center;
   gap: 30px;
-
 }
 
 .card {
@@ -362,11 +218,8 @@ button:hover span:last-child {
 .card img {
   object-fit: cover;
 
-
   width: 430px;
   height: 520px;
-
-
 }
 
 .card::after {
@@ -397,7 +250,6 @@ button:hover span:last-child {
   text-align: center;
   margin-top: 20px;
   z-index: 2px;
-
 }
 
 .position h2 {
@@ -414,7 +266,7 @@ button:hover span:last-child {
   line-height: 1.9;
 }
 
-button {
+.button-card {
   position: relative;
   right: 86px;
   margin-top: 2rem;
@@ -429,8 +281,6 @@ button {
 
   padding: 24px 40px 22px;
 
-
-
   text-decoration: none;
   cursor: pointer;
   background: #fff;
@@ -440,13 +290,7 @@ button {
   font-weight: bold;
 }
 
-button span:first-child {
-  position: relative;
-  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-  z-index: 10;
-}
-
-button span:last-child {
+.button-card span:last-child {
   color: white;
   display: block;
   position: absolute;
@@ -461,7 +305,7 @@ button span:last-child {
   line-height: 13px;
 }
 
-button:after {
+.button-card:after {
   content: "";
   position: absolute;
   bottom: -50%;
@@ -474,168 +318,6 @@ button:after {
   transform: skewY(9.3deg) scaleY(0);
   z-index: 50;
 }
-
-button:hover:after {
-  transform-origin: bottom center;
-  transform: skewY(9.3deg) scaleY(2);
-}
-
-button:hover span:last-child {
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 1;
-  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
-}
-
-
-
-
-
-
-
-.products {
-  min-width: 90vw;
-  min-height: 90vh;
-  padding: 70px 40px;
-  overflow: hidden;
-}
-
-.products h1 {
-  color: black;
-  font-size: 44px;
-  text-align: center;
-  letter-spacing: 4.5px;
-  font-weight: 300;
-}
-
-
-.logos {
-  max-width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding-top: 4.5rem;
-  gap: 90px;
-  flex-wrap: wrap;
-}
-
-/* ===========================
-   CARD GRID
-=========================== */
-
-.cardcontainer {
-  width: 100%;
-  padding: 70px 30px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.card {
-  width: 430px;
-  height: 520px;
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-}
-
-.card img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(14, 13, 13, 0.563);
-}
-
-
-
-.position {
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.position h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.position p {
-  font-size: 1.2rem;
-  line-height: 1.7;
-}
-
-
-button {
-  margin-top: 2rem;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #18181a;
-  color: #18181a;
-  font-size: 18px;
-  padding: 20px 35px;
-  cursor: pointer;
-  background: #fff;
-  font-weight: bold;
-}
-
-button span:first-child {
-  position: relative;
-  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-  z-index: 10;
-}
-
-button span:last-child {
-  color: white;
-  position: absolute;
-  bottom: 0;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translateY(225%) translateX(-50%);
-  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-}
-
-button:after {
-  content: "";
-  position: absolute;
-  bottom: -50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  transform-origin: bottom center;
-  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
-  transform: skewY(9.3deg) scaleY(0);
-}
-
-button:hover:after {
-  transform: skewY(9.3deg) scaleY(2);
-}
-
-button:hover span:last-child {
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 1;
-}
-
 
 @media (max-width: 1024px) {
   .cardcontainer {
@@ -656,14 +338,9 @@ button:hover span:last-child {
   }
 }
 
-
 @media (max-width: 768px) {
   .products {
-    padding: 40px 20px;
-  }
-
-  .products h1 {
-    font-size: 32px;
+    padding: 60px 20px;
   }
 
   .logos {
@@ -673,7 +350,7 @@ button:hover span:last-child {
 
   .cardcontainer {
     grid-template-columns: 1fr;
-    padding: 40px 10px;
+    padding: 0px 0px;
   }
 
   .card {
@@ -688,9 +365,7 @@ button:hover span:last-child {
   }
 }
 
-
 @media (max-width: 480px) {
-
   .products h1 {
     font-size: 26px;
     letter-spacing: 2px;
@@ -714,8 +389,9 @@ button:hover span:last-child {
   }
 }
 
-
+/* Musab */
 .hero {
+  margin: 110px 130px;
   padding: 100px 6%;
   background-image: url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/banner-03.jpg");
   background-size: cover;
@@ -752,18 +428,6 @@ button:hover span:last-child {
   color: #000;
 }
 
-.button {
-  margin-top: 22px;
-  padding: 14px 26px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  letter-spacing: 1px;
-  border-radius: 6px;
-}
-
-
 .features {
   display: flex;
   justify-content: space-between;
@@ -783,6 +447,7 @@ button:hover span:last-child {
 }
 
 .feature-box h3 {
+  color: #000;
   margin: 10px 0;
   font-size: 18px;
   font-weight: 600;
@@ -794,15 +459,16 @@ button:hover span:last-child {
   margin: 0;
 }
 
-
 @media (max-width: 768px) {
-
   body {
     background: #fff;
     margin: 0;
   }
 
   .hero {
+    margin: 0px 10px;
+    margin-top: 150px;
+    margin-bottom: 20px;
     padding: 70px 8%;
     text-align: center;
     background-position: top;
@@ -814,12 +480,6 @@ button:hover span:last-child {
 
   .hero-text p {
     max-width: 100%;
-    font-size: 14px;
-  }
-
-  .button {
-    width: 100%;
-    padding: 14px;
     font-size: 14px;
   }
 
@@ -842,11 +502,13 @@ button:hover span:last-child {
   }
 }
 
+/* Aqib */
+
 .footer-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1200px;
+
   margin: 0 auto;
 }
 
@@ -858,7 +520,7 @@ button:hover span:last-child {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 90px;
+  gap: 190px;
   margin: 30px;
 }
 
@@ -889,9 +551,8 @@ button:hover span:last-child {
   color: #777;
   margin-top: 30px;
 }
-img{
-      margin-left: 31px;
-    margin-bottom: 61px;
-width: 169px;
+img {
+  margin-left: 31px;
+  margin-bottom: 61px;
+  width: 169px;
 }
-/* End of file */
